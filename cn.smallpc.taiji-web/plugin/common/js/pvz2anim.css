@@ -1,0 +1,5 @@
+[_pvz2-anim] > img {
+	position: absolute;
+	animation-timing-function: step-end;
+	animation-iteration-count: infinite;
+}

@@ -1,0 +1,55 @@
+* {
+	user-select: none;
+	font-family: 'Cascadia Mono';
+}
+
+.mdui-drawer {
+	overflow-y: scroll;
+}
+
+td {
+	text-align: center;
+}
+
+#doc-table-shell,
+#obj-table-shell,
+#data-table-shell,
+#wave-table-shell {
+	overflow-y: scroll;
+	padding: 8px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.25);
+}
+
+#doc-table > tbody > tr > td .mdui-textfield,
+#obj-table > tbody > tr > td .mdui-textfield,
+#data-table > tbody > tr > td .mdui-textfield,
+#wave-table > tbody > tr > td .mdui-textfield {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.stage {
+	display: flex;
+}
+.lawn {
+	width: 90%;
+	height: 100%;
+}
+.row {
+	display: flex;
+	width: 100%;
+	height: 20%;
+}
+.tile {
+	width: calc(100% / 9);
+	height: 100%;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.25);
+}
+.path {
+	width: 10%;
+	height: 100%;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.25);
+}

@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{af22fafd-2b32-47e8-9817-a8badb15e49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Log">
+      <UniqueIdentifier>{67f742e9-a215-4957-8ad8-894dfc771aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Type">
+      <UniqueIdentifier>{7e119758-c588-46e9-bbe7-75d6b581378f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util">
+      <UniqueIdentifier>{80f93986-9845-4ae9-bef2-6650cb3e72ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Data">
+      <UniqueIdentifier>{b64459dc-8631-4a82-a87e-751fa1afffc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Data\Compressor">
+      <UniqueIdentifier>{f97ff413-1bb7-4baf-a41b-7c3bcfb0a645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Data\Hasher">
+      <UniqueIdentifier>{8ef9743f-6b7f-4907-a0e7-7b3a685be601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\File">
+      <UniqueIdentifier>{e856eda2-82d5-4a63-baa1-8b7198c43d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\CharSet">
+      <UniqueIdentifier>{d2eab664-61c9-4a44-b6a0-0579688ff3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\RTON">
+      <UniqueIdentifier>{bf4412a9-6544-4c62-aa0a-7ddc3a29e1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\PBVarInt">
+      <UniqueIdentifier>{754188b4-64ab-48ee-8902-5ab1f415c24b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entry">
+      <UniqueIdentifier>{aed37d96-b4ba-4d56-8fc8-cb0787c2e04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Executor">
+      <UniqueIdentifier>{3089e274-d423-4faa-9e89-395864290cd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Other">
+      <UniqueIdentifier>{2d2ca747-b6e4-438f-b550-66ee9140dbf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Data\Encryptor">
+      <UniqueIdentifier>{02796721-9982-4ee6-9ba9-0d4631b66f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\ResPkg">
+      <UniqueIdentifier>{c9dcf4b7-fa9f-4ee7-963e-5bd4d8678cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Image">
+      <UniqueIdentifier>{0ccbecbc-21ff-459b-9160-f2f12f5aa80e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\ResPkg\DZ">
+      <UniqueIdentifier>{d7664cc8-b854-4633-8b07-a463db03a470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\ResPkg\PAK">
+      <UniqueIdentifier>{87d8ec43-4e3c-4680-a849-8b83bfed0136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\ResPkg\RSB">
+      <UniqueIdentifier>{9b424b12-b9af-4076-9a38-9aa743521f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\ResPkg\RSB\RSGP">
+      <UniqueIdentifier>{1c929389-8280-4347-be44-413ee0c25a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Image\Encoder">
+      <UniqueIdentifier>{ef7a9058-2064-495d-9e31-bba2f14f32db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Image\Spliter">
+      <UniqueIdentifier>{8f869f32-52c1-4e98-8426-85769c2806cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Info">
+      <UniqueIdentifier>{1e5e1334-1bc5-4b5a-8840-3b500e8d23b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Audio">
+      <UniqueIdentifier>{5702d9c1-55b6-4fe0-8ec8-bb627c78090d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Audio\WwiseSoundBank">
+      <UniqueIdentifier>{9e723c97-76ad-40cd-b690-b373157e4528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Audio\WwiseEncodedMedia">
+      <UniqueIdentifier>{bf85906e-6343-49f7-8448-217525ddc97d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Anim">
+      <UniqueIdentifier>{fdfe0dc9-c8e1-464d-861f-05fd067ba0ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Anim\PopcapAnim">
+      <UniqueIdentifier>{c816578b-1951-43fc-965e-3c186bcf41bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Anim\PopcapAnim\Converter">
+      <UniqueIdentifier>{7808684e-da5b-4aba-90cb-c72f12455e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Util\Expand">
+      <UniqueIdentifier>{f212bf98-ff66-4b3f-a75a-70950b173912}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\core\Ver.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\UserLiteral.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\TypeUtil.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Ptr.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Platform.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Iter.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Const.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Common.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\RTON\Struct.hpp">
+      <Filter>src\Util\RTON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\RTON\Encoder.hpp">
+      <Filter>src\Util\RTON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Info.hpp">
+      <Filter>src\Util\ResPkg\DZ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Struct.hpp">
+      <Filter>src\Util\ResPkg\DZ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Packer.hpp">
+      <Filter>src\Util\ResPkg\DZ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\Type.hpp">
+      <Filter>src\Util\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\CharSet\CharSet.hpp">
+      <Filter>src\Util\CharSet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Compressor\LZMA.hpp">
+      <Filter>src\Util\Data\Compressor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Compressor\ZLib.hpp">
+      <Filter>src\Util\Data\Compressor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\Base64.hpp">
+      <Filter>src\Util\Data\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\XOR.hpp">
+      <Filter>src\Util\Data\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Hasher\MD5.hpp">
+      <Filter>src\Util\Data\Hasher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Hasher\FNV.hpp">
+      <Filter>src\Util\Data\Hasher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\File\File.hpp">
+      <Filter>src\Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\InfoType.hpp">
+      <Filter>src\Util\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Other\Other.hpp">
+      <Filter>src\Util\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\PBVarInt\PBVarInt.hpp">
+      <Filter>src\Util\PBVarInt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\ByteStream.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\File.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\InfoType.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\List.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\JSON.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\Map.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\Path.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\Str.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Log\Log.hpp">
+      <Filter>src\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Executor\Executor.hpp">
+      <Filter>src\Executor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Executor\Config.hpp">
+      <Filter>src\Executor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Entry\Entry.hpp">
+      <Filter>src\Entry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Entry\Validate.hpp">
+      <Filter>src\Entry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Packer.hpp">
+      <Filter>src\Util\ResPkg\PAK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Struct.hpp">
+      <Filter>src\Util\ResPkg\PAK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Info.hpp">
+      <Filter>src\Util\ResPkg\PAK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\Rijndael.hpp">
+      <Filter>src\Util\Data\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\RTON\Encryptor.hpp">
+      <Filter>src\Util\RTON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Packer.hpp">
+      <Filter>src\Util\ResPkg\RSB\RSGP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Struct.hpp">
+      <Filter>src\Util\ResPkg\RSB\RSGP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Info.hpp">
+      <Filter>src\Util\ResPkg\RSB\RSGP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Packer.hpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Struct.hpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Info.hpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Common.hpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\BlockFunc.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\Encoder.hpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\ImgFile.hpp">
+      <Filter>src\Util\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\PVRTC.hpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\ETC.hpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Image\Spliter\Spliter.hpp">
+      <Filter>src\Util\Image\Spliter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\PlatformSupport.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Type\ImgType.hpp">
+      <Filter>src\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Info\Info.hpp">
+      <Filter>src\Util\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Info\RSBInfoX.hpp">
+      <Filter>src\Util\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Info\RSBInfoXOri.hpp">
+      <Filter>src\Util\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Packer.hpp">
+      <Filter>src\Util\Audio\WwiseSoundBank</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Struct.hpp">
+      <Filter>src\Util\Audio\WwiseSoundBank</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Info.hpp">
+      <Filter>src\Util\Audio\WwiseSoundBank</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Aduio\WaveStruct.hpp">
+      <Filter>src\Util\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseEncodedMedia\Encoder.hpp">
+      <Filter>src\Util\Audio\WwiseEncodedMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Info.hpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Struct.hpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Encoder.hpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter.hpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSS.hpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\Common.hpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSSInfo.hpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\XFL.hpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Expand\Expand.hpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Expand\JSONPatch.hpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Expand\RSBPatchX.hpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Util\Expand\PvZ2Mod.hpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\ReDef.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\Entry\Shell.hpp">
+      <Filter>src\Entry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\Log\Log.cpp">
+      <Filter>src\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Data\Compressor\ZLib.cpp">
+      <Filter>src\Util\Data\Compressor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\File\File.cpp">
+      <Filter>src\Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Type\File.cpp">
+      <Filter>src\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\CharSet\CharSet.cpp">
+      <Filter>src\Util\CharSet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Type\JSON.cpp">
+      <Filter>src\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Type\Str.cpp">
+      <Filter>src\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\RTON\Encoder.cpp">
+      <Filter>src\Util\RTON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\PBVarInt\PBVarInt.cpp">
+      <Filter>src\Util\PBVarInt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Entry\Validate.cpp">
+      <Filter>src\Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Entry\Entry.cpp">
+      <Filter>src\Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Other\Other.cpp">
+      <Filter>src\Util\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Executor\VarReader.cpp">
+      <Filter>src\Executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Type\Path.cpp">
+      <Filter>src\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Executor\Executor.cpp">
+      <Filter>src\Executor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Data\Hasher\MD5.cpp">
+      <Filter>src\Util\Data\Hasher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Data\Compressor\LZMA.cpp">
+      <Filter>src\Util\Data\Compressor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Data\Encryptor\Base64.cpp">
+      <Filter>src\Util\Data\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\ResPkg\DZ\Packer.cpp">
+      <Filter>src\Util\ResPkg\DZ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\ResPkg\PAK\Packer.cpp">
+      <Filter>src\Util\ResPkg\PAK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Data\Encryptor\Rijndael.cpp">
+      <Filter>src\Util\Data\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\RTON\Encryptor.cpp">
+      <Filter>src\Util\RTON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Packer.cpp">
+      <Filter>src\Util\ResPkg\RSB\RSGP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\Common.cpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\Packer.cpp">
+      <Filter>src\Util\ResPkg\RSB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\Encoder.cpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Image\ImgFile.cpp">
+      <Filter>src\Util\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\PVRTC.cpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\ETC.cpp">
+      <Filter>src\Util\Image\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Image\Spliter\Spliter.cpp">
+      <Filter>src\Util\Image\Spliter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\PlatformSupport.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Info\Info.cpp">
+      <Filter>src\Util\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Aduio\WwiseEncodedMedia\Encoder.cpp">
+      <Filter>src\Util\Audio\WwiseEncodedMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Packer.cpp">
+      <Filter>src\Util\Audio\WwiseSoundBank</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Encoder.cpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter.cpp">
+      <Filter>src\Util\Anim\PopcapAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSS.cpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\XFL.cpp">
+      <Filter>src\Util\Anim\PopcapAnim\Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Expand\Expand.cpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Expand\JSONPatch.cpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Expand\RSBPatchX.cpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Util\Expand\PvZ2Mod.cpp">
+      <Filter>src\Util\Expand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Entry\Shell.cpp">
+      <Filter>src\Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\Exception.hpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

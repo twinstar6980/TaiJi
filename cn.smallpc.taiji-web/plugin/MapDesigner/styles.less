@@ -1,0 +1,243 @@
+* {
+	user-select: none;
+}
+
+/* attr for event-hide */
+[_eh] * {
+	pointer-events: none !important;
+}
+
+.mdui-drawer {
+	overflow-y: scroll;
+}
+
+[_pvz2-anim] {
+	position: absolute;
+}
+[_pvz2-anim] > img {
+	position: absolute;
+	animation-timing-function: step-end;
+	animation-iteration-count: infinite;
+}
+
+/* map item-shop page-selector */
+#map-itemshop-page-selector > a {
+	min-width: 0;
+}
+
+/* map view stage */
+#map-view-stage-shell {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	/* background */
+	> [_component='bg'] {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(9, 18, 21, 0.45);
+	}
+	/* guide-line */
+	> [_component='guideline_shell'] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		> * {
+			position: absolute;
+			background-color: blueviolet;
+			text-align: center;
+		}
+		> [_direction='horizontal'] {
+			width: 100%;
+			height: 1px;
+		}
+		> [_direction='vertical'] {
+			width: 1px;
+			height: 100%;
+		}
+	}
+	/* multi-selector */
+	> [_component='multi_selector_rect'] {
+		position: absolute;
+		outline-style: dashed;
+		display: none;
+
+		&[_s] {
+			display: block;
+		}
+	}
+}
+
+/* layer shell */
+[_a='map'][_b='layer_shell'] {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0% 0%;
+}
+/* layer */
+.map_layer {
+	position: absolute;
+	overflow: visible;
+	pointer-events: none;
+	opacity: 0.5;
+}
+/* layer state - visible */
+.map_layer[_v] {
+	pointer-events: auto;
+	opacity: 1;
+}
+/* piece when enable */
+.map_layer[_v] > .map_item * {
+	pointer-events: auto;
+}
+
+/* item */
+.map_item {
+	position: absolute;
+	pointer-events: none;
+	width: 0;
+	height: 0;
+}
+/* item when select */
+.map_item[_s] * {
+	outline-style: dashed;
+	cursor: grab;
+}
+/* item when move */
+.map_item[_m] * {
+	cursor: move;
+}
+/* piece - img */
+.map_item[_t='0'][_pt='0'] {
+	transform-origin: 0% 0%;
+}
+.map_item[_t='0'][_pt='0'] > img {
+	display: block;
+	transform-origin: 50% 0%;
+	transform: translate(-50%, 0%) scale(0.390625);
+}
+/* piece - anim */
+.map_item[_t='0'][_pt='1'] {
+	transform-origin: 0% 0%;
+}
+.map_item[_t='0'][_pt='1'] > div {
+	transform-origin: -30.517578125px -30.517578125px;
+	transform: scale(0.390625);
+}
+/* event - upgrade */
+.map_item[_t='1'][_et='upgrade'] > img {
+	display: block;
+	transform-origin: 50% 0%;
+	transform: translate(-50%, -34%) scale(0.390625);
+}
+/* event - giftbox */
+.map_item[_t='1'][_et='giftbox'] > div {
+	transform-origin: -39px -39px;
+	transform: translate(-78px, -78px) scale(0.5);
+}
+/* event - pinata */
+.map_item[_t='1'][_et='pinata'] > img {
+	display: block;
+	position: absolute;
+	transform-origin: 50% 0%;
+	transform: translate(-50%, -31%) scale(0.390625);
+}
+/* event - plant - bg */
+.map_item[_t='1'][_et='plant'] > [_t='bg'] {
+	display: block;
+	position: absolute;
+	transform-origin: 50% 0%;
+	transform: translate(-50%, -31%) scale(0.390625);
+}
+/* event - plant - fg */
+.map_item[_t='1'][_et='plant'] > [_t='fg'] {
+	display: block;
+	position: absolute;
+	transform-origin: 50% 0%;
+	transform: translate(-56.5%, -34%) scale(0.390625);
+}
+/* event - level */
+.map_item[_t='1'][_et='level'] > [_t='node'] {
+	position: absolute;
+	transform: scale(0.5) translate(-199.68px, -199.68px);
+}
+.map_item[_t='1'][_et='level'] > [_t='text'] {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	text-shadow: 3px 2px 1px black;
+	text-align: center;
+	border-style: none;
+	font-family: fbUsv8C5eI;
+	font-size: 28px;
+	color: white;
+	transform: translate(-60%, -150%);
+	white-space: nowrap;
+}
+/* event - level - danger */
+.map_item[_t='1'][_et='level'] > [_t='danger_node'] {
+	position: absolute;
+	transform: scale(0.390625) translate(-199.68px, -199.68px);
+}
+.map_item[_t='1'][_et='level'] > [_t='danger_text_bg'] {
+	display: block;
+	position: absolute;
+	transform-origin: 50% 0%;
+	transform: translate(-54%, 25%) scale(0.390625);
+}
+.map_item[_t='1'][_et='level'] > [_t='danger_text'] {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	text-shadow: 3px 2px 1px black;
+	text-align: center;
+	border-style: none;
+	font-family: fbUsv8C5eI;
+	font-size: 28px;
+	color: white;
+	transform: translate(-90%, 105%);
+	white-space: nowrap;
+}
+.map_item[_t='1'][_et=''] {
+}
+
+[_a='map'][_b='item_shop'][_sd] {
+	cursor: not-allowed;
+}
+[_a='map'][_b='item_shop'][_sd] * {
+	pointer-events: none;
+}
+.map_item_shop_card {
+	height: 146px;
+}
+.map_item_shop_card_content {
+	width: 100%;
+}
+.map_item_shop_card[_t='anim'] > .map_item_shop_card_content {
+	width: 100%;
+	height: 100%;
+}
+.map_item_shop_card[_t='anim'] > .map_item_shop_card_content > div {
+	transform-origin: -30.517578125px -30.517578125px;
+	transform: scale(0.390625);
+}
+.map_item_shop_card[_t='anim'] > .map_item_shop_card_content > div > img {
+	width: auto;
+}
+.map_item_shop_card[_t='event'] > .map_item_shop_card_content {
+	width: 100%;
+	height: 100%;
+}
+.map_item_shop_card[_t='event'] > .map_item_shop_card_content > div {
+	transform-origin: 0% 0%;
+	transform: scale(0.390625);
+}
+.map_item_shop_card[_t='event'] > .map_item_shop_card_content > div > img {
+	width: auto;
+}

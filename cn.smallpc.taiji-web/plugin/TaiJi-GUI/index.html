@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script src='../common/mdui/js/mdui.min.js'></script>
+	<link href='../common/mdui/css/mdui.min.css' rel='stylesheet'>
+	<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+	<script src='../common/js/jquery-3.5.1.js'></script>
+	<script>if (window.module) module = window.module;</script>
+	<script src='../common/js/typeUtil.js'></script>
+	<script src='../common/js/toolUtil.js'></script>
+	<script src='./scripts.js'></script>
+	<link href='./styles.css' rel='stylesheet'>
+	<title>TaiJi-GUI</title>
+</head>
+<body class='mdui-theme-layout-dark mdui-theme-primary-teal mdui-theme-accent-blue mdui-appbar-with-toolbar mdui-appbar-with-tab'>
+	<div id='dialog-docs-theme'></div>
+	<div class='mdui-appbar mdui-appbar-fixed'>
+		<div class='mdui-toolbar mdui-color-theme'>
+			<button class='mdui-btn mdui-btn-icon' mdui-tooltip='{ content: "toggle drawer" }' mdui-drawer='{ target: "#_left_drawer" }'>
+				<i class='mdui-icon material-icons'>menu</i>
+			</button>
+			<p class='mdui-typo-title'>TaiJi-GUI</p>
+			<button id='about' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "about" }'>
+				<i class='mdui-icon material-icons'>info_outline</i>
+			</button>
+			<button class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "change color" }' mdui-dialog='{ target: "#dialog-docs-theme" }'>
+				<i class='mdui-icon material-icons'>color_lens</i>
+			</button>
+			<button id='refresh' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "refresh" }'>
+				<i class='mdui-icon material-icons'>refresh</i>
+			</button>
+			<button id='clean' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "clean" }'>
+				<i class='mdui-icon material-icons'>clear_all</i>
+			</button>
+			<div class='mdui-toolbar-spacer'></div>
+			<button class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "toggle drawer" }' mdui-drawer='{ target: "#_right_drawer" }'>
+				<i class='mdui-icon material-icons'>menu</i>
+			</button>
+		</div>
+		<div id='interface-select' class='mdui-tab mdui-color-theme' mdui-tab='{ loop: true }'>
+			<a href='#console' class='mdui-ripple' mdui-tooltip='{ content: "console" }'><i class="mdui-icon material-icons">bug_report</i></a>
+			<a href='#simple-script' class='mdui-ripple' mdui-tooltip='{ content: "simple-script" }'><i class="mdui-icon material-icons">dialpad</i></a>
+			<a href='#foolish-mode' class='mdui-ripple' mdui-tooltip='{ content: "foolish-mode" }'><i class="mdui-icon material-icons">airline_seat_recline_extra</i></a>
+			<a href='#mod-manager' class='mdui-ripple' mdui-tooltip='{ content: "mod-manager" }'><i class="mdui-icon material-icons">dashboard</i></a>
+		</div>
+	</div>
+	<div class='mdui-container-fluid mdui-m-t-2 mdui-m-x-1'>
+		<div id='console' class='mdui-container-fluid'>
+			<div id='console-page' class='mdui-m-t-1 mdui-p-x-1 mdui-shadow-8'></div>
+			<div class='mdui-row mdui-valign mdui-m-t-1 mdui-m-x-0 mdui-p-x-2 mdui-shadow-8'>
+				<div class='mdui-col-xs-10'>
+					<div class='mdui-textfield'>
+						<input id='console-stdin' class='mdui-textfield-input' type='text' placeholder='STD-IN at here , Enter to upload'></input>
+					</div>
+				</div>
+				<button id='console-exit' class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple mdui-m-l-2'>Exit</button>
+				<button id='console-clear' class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple mdui-m-l-2'>Clear</button>
+			</div>
+		</div>
+		<div id='simple-script' class='mdui-container-fluid'>
+			<div class='mdui-p-a-1 mdui-shadow-8'>
+				<button id='simple-script-run' class='mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Run-Script</button>
+				<div class='mdui-m-l-2' style='display: inline;'>
+					<select id='select-func' class='mdui-select mdui-m-l-2' mdui-select=''></select>
+				</div>
+			</div>
+			<ul id='parm-list' class='mdui-list mdui-list-dense mdui-container-fluid mdui-shadow-8 mdui-m-t-2'></ul>
+		</div>
+		<div id='foolish-mode' class='mdui-container-fluid'>
+			<div class='mdui-tab mdui-tab-full-width mdui-color-theme' mdui-tab='{ loop: true }'>
+				<a href='#foolish-rton' class='mdui-ripple'>RTON Encoder</a>
+				<a href='#foolish-rsb' class='mdui-ripple'>RSB Packer</a>
+				<a href='#foolish-pam' class='mdui-ripple'>PAM Converter</a>
+			</div>
+			<div class='mdui-container-fluid mdui-shadow-8 mdui-p-a-2'>
+				<div id='foolish-rton'>
+					<div class='mdui-m-t-2 mdui-p-x-2 mdui-shadow-8'>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>RTON File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text' _pn='RTONFile'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>JSON File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text' _pn='JSONFile'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-6 mdui-shadow-8'>
+							<div class='mdui-row mdui-valign  mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>UseCacheStr</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox' _pn='UseCacheStr'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>UseSpecialTypeForRTID</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox' _pn='UseSpecialTypeForRTID'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>GetAllStrToTop</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox' _pn='GetAllStrToTop'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class='mdui-col-xs-6 mdui-m-l-2 mdui-shadow-8'>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>RTONDataOfs</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<div class='mdui-textfield'>
+										<input class='mdui-textfield-input' type='text' _pn='RTONDataOfs'></input>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-6'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>DeCode</button>
+						</div>
+						<div class='mdui-col-xs-6 mdui-m-l-2'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>EnCode</button>
+						</div>
+					</div>
+				</div>
+				<div id='foolish-rsb'>
+					<div class='mdui-m-t-2 mdui-p-x-2 mdui-shadow-8'>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>Dir</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-6 mdui-shadow-8'>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>PackFromGroup</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>PackRSGPByMainInfo</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPutNewPacket</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>UseReadyPacket</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>MemorySize</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<div class='mdui-textfield'>
+										<input class='mdui-textfield-input' type='text'></input>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='mdui-col-xs-6 mdui-m-l-2 mdui-shadow-8'>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_Res</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_Packet</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_PacketInfo</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_Group</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_Group_Res</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-3'>OutPut_Group_Packet</p>
+								<div class='mdui-col-xs-9 mdui-m-x-2'>
+									<label class='mdui-checkbox'>
+										<input class='mdui-textfield-input' type='checkbox'></input>
+										<i class='mdui-checkbox-icon'></i>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-6'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>Pack</button>
+						</div>
+						<div class='mdui-col-xs-6 mdui-m-l-2'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>UnPack</button>
+						</div>
+					</div>
+				</div>
+				<div id='foolish-pam'>
+					<div class='mdui-m-t-2 mdui-p-x-2 mdui-shadow-8'>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>PAM File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>XFL File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+						<div class='mdui-row mdui-valign'>
+							<p class='mdui-col-xs-2'>Ripe-JSON File</p>
+							<div class='mdui-col-xs-9'>
+								<div class='mdui-textfield'>
+									<input class='mdui-textfield-input' type='text'></input>
+								</div>
+							</div>
+							<button class='mdui-col-xs-1 mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-ripple'>Select</button>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-12 mdui-shadow-8'>
+							<div class='mdui-row mdui-valign mdui-p-x-1'>
+								<p class='mdui-col-xs-2'>ImageSize</p>
+								<div class='mdui-col-xs-9'>
+									<select class='mdui-select' mdui-select=''>
+										<option>1536</option>
+										<option>768</option>
+										<option>384</option>
+										<option>1280</option>
+										<option>640</option>
+										<option>320</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='mdui-row mdui-valign mdui-m-t-2 mdui-p-a-1'>
+						<div class='mdui-col-xs-4'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>PAM -> RIPE-JSON</button>
+						</div>
+						<div class='mdui-col-xs-4 mdui-m-l-2'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>PAM -> XFL</button>
+						</div>
+						<div class='mdui-col-xs-4 mdui-m-l-2'>
+							<button class='mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent'>XFL -> PAM</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id='mod-manager' class='mdui-container-fluid'>
+			<button class='mdui-btn mdui-ripple mdui-color-theme-accent'>Run-Intro</button>
+			<button class='mdui-btn mdui-ripple mdui-color-theme-accent'>Run-Outro</button>
+			<ul id='mod-list' class='mdui-list mdui-list-dense'></ul>
+		</div>
+	</div>
+</body>
+</html>

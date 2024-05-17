@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v_1d5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v_3d5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v_4d5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <Button
+        android:id="@+id/run"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_run_qe"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/run_with_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_run_qe_with_path"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_main" />
+
+    <EditText
+        android:id="@+id/path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/path_select"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/run" />
+
+    <Button
+        android:id="@+id/path_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_select"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/path"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_v_4d5"
+        app:layout_constraintTop_toTopOf="@+id/path" />
+
+    <CheckBox
+        android:id="@+id/is_batch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Batch"
+        app:layout_constraintBottom_toBottomOf="@+id/option_main"
+        app:layout_constraintEnd_toStartOf="@+id/option_main"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/option_main"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/option_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v_3d5"
+        app:layout_constraintStart_toStartOf="@+id/gl_v_1d5"
+        app:layout_constraintTop_toBottomOf="@+id/path" />
+
+    <Spinner
+        android:id="@+id/option_sub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option_main"
+        app:layout_constraintStart_toStartOf="@+id/gl_v_3d5"
+        app:layout_constraintTop_toTopOf="@+id/option_main" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

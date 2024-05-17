@@ -1,0 +1,35 @@
+{
+  "name": "taiji-webutil",
+  "version": "1.0.0",
+  "author": "SPC",
+  "description": "TaiJi:Web-Util",
+  "main": "main.js",
+  "build": {
+    "productName": "cn.smallpc.taiji.web",
+    "appId": "cn.smallpc.taiji.web",
+    "asar": true,
+    "compression": "maximum",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "app.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "packager": "electron-packager . out --out=./out --platform=win32 --arch=x64 --asar --app-version=0.0.1 --electron-version 10.1.2 --overwrite --ignore=node_modules"
+  },
+  "devDependencies": {
+    "electron": "^13.1.4"
+  }
+}

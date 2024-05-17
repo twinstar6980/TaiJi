@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a61a221b-1f76-4bff-90a5-baf21bc62161}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)output\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)output\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)output\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)output\$(Platform)-$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)0\0\%(RelativeDir)%(filename).o</ObjectFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\dependency\zlib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4996;6031</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)0\0\%(RelativeDir)%(filename).o</ObjectFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\dependency\zlib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4996;6031</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)0\0\%(RelativeDir)%(filename).o</ObjectFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\dependency\zlib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4996;6031</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)0\0\%(RelativeDir)%(filename).o</ObjectFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\dependency\zlib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4996;6031</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\core\Common.hpp" />
+    <ClInclude Include="..\..\src\core\Const.hpp" />
+    <ClInclude Include="..\..\src\core\Entry\Entry.hpp" />
+    <ClInclude Include="..\..\src\core\Entry\Shell.hpp" />
+    <ClInclude Include="..\..\src\core\Entry\Validate.hpp" />
+    <ClInclude Include="..\..\src\core\Executor\Config.hpp" />
+    <ClInclude Include="..\..\src\core\Executor\Executor.hpp" />
+    <ClInclude Include="..\..\src\core\Iter.hpp" />
+    <ClInclude Include="..\..\src\core\Log\Log.hpp" />
+    <ClInclude Include="..\..\src\core\Platform.hpp" />
+    <ClInclude Include="..\..\src\core\PlatformSupport.hpp" />
+    <ClInclude Include="..\..\src\core\Ptr.hpp" />
+    <ClInclude Include="..\..\src\core\ReDef.hpp" />
+    <ClInclude Include="..\..\src\core\Type.hpp" />
+    <ClInclude Include="..\..\src\core\TypeUtil.hpp" />
+    <ClInclude Include="..\..\src\core\Type\ByteStream.hpp" />
+    <ClInclude Include="..\..\src\core\Type\File.hpp" />
+    <ClInclude Include="..\..\src\core\Type\ImgType.hpp" />
+    <ClInclude Include="..\..\src\core\Type\InfoType.hpp" />
+    <ClInclude Include="..\..\src\core\Type\JSON.hpp" />
+    <ClInclude Include="..\..\src\core\Type\List.hpp" />
+    <ClInclude Include="..\..\src\core\Type\Map.hpp" />
+    <ClInclude Include="..\..\src\core\Type\Path.hpp" />
+    <ClInclude Include="..\..\src\core\Type\BlockFunc.hpp" />
+    <ClInclude Include="..\..\src\core\Type\Str.hpp" />
+    <ClInclude Include="..\..\src\core\UserLiteral.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Aduio\WaveStruct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseEncodedMedia\Encoder.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Packer.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\Common.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSS.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSSInfo.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\XFL.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Encoder.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Anim\PopcapAnim\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\CharSet\CharSet.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Compressor\LZMA.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Compressor\ZLib.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\Base64.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\Rijndael.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Encryptor\XOR.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Hasher\FNV.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Data\Hasher\MD5.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Expand\Expand.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Expand\JSONPatch.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Expand\PvZ2Mod.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Expand\RSBPatchX.hpp" />
+    <ClInclude Include="..\..\src\core\Util\File\File.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\Encoder.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\ETC.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\Encoder\PVRTC.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\ImgFile.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\InfoType.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\Spliter\Spliter.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Image\Type.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Info\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Info\RSBInfoX.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Info\RSBInfoXOri.hpp" />
+    <ClInclude Include="..\..\src\core\Util\Other\Other.hpp" />
+    <ClInclude Include="..\..\src\core\Util\PBVarInt\PBVarInt.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Packer.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\DZ\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Packer.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\PAK\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Packer.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Common.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Info.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Packer.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\ResPkg\RSB\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Util\RTON\Encoder.hpp" />
+    <ClInclude Include="..\..\src\core\Util\RTON\Encryptor.hpp" />
+    <ClInclude Include="..\..\src\core\Util\RTON\Struct.hpp" />
+    <ClInclude Include="..\..\src\core\Ver.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\Entry\Entry.cpp" />
+    <ClCompile Include="..\..\src\core\Entry\Shell.cpp" />
+    <ClCompile Include="..\..\src\core\Entry\Validate.cpp" />
+    <ClCompile Include="..\..\src\core\Exception.hpp" />
+    <ClCompile Include="..\..\src\core\Executor\Executor.cpp" />
+    <ClCompile Include="..\..\src\core\Executor\VarReader.cpp" />
+    <ClCompile Include="..\..\src\core\Log\Log.cpp" />
+    <ClCompile Include="..\..\src\core\PlatformSupport.cpp" />
+    <ClCompile Include="..\..\src\core\Type\File.cpp" />
+    <ClCompile Include="..\..\src\core\Type\JSON.cpp" />
+    <ClCompile Include="..\..\src\core\Type\Path.cpp" />
+    <ClCompile Include="..\..\src\core\Type\Str.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Aduio\WwiseEncodedMedia\Encoder.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Aduio\WwiseSoundBank\Packer.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\CSS.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Converter\XFL.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Anim\PopcapAnim\Encoder.cpp" />
+    <ClCompile Include="..\..\src\core\Util\CharSet\CharSet.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Data\Compressor\LZMA.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Data\Compressor\ZLib.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Data\Encryptor\Base64.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Data\Encryptor\Rijndael.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Data\Hasher\MD5.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Expand\Expand.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Expand\JSONPatch.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Expand\PvZ2Mod.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Expand\RSBPatchX.cpp" />
+    <ClCompile Include="..\..\src\core\Util\File\File.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\Encoder.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\ETC.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Image\Encoder\PVRTC.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Image\ImgFile.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Image\Spliter\Spliter.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Info\Info.cpp" />
+    <ClCompile Include="..\..\src\core\Util\Other\Other.cpp" />
+    <ClCompile Include="..\..\src\core\Util\PBVarInt\PBVarInt.cpp" />
+    <ClCompile Include="..\..\src\core\Util\ResPkg\DZ\Packer.cpp" />
+    <ClCompile Include="..\..\src\core\Util\ResPkg\PAK\Packer.cpp" />
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\Common.cpp" />
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\Packer.cpp" />
+    <ClCompile Include="..\..\src\core\Util\ResPkg\RSB\RSGP\Packer.cpp" />
+    <ClCompile Include="..\..\src\core\Util\RTON\Encoder.cpp" />
+    <ClCompile Include="..\..\src\core\Util\RTON\Encryptor.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/title_setting_common">
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            app:defaultValue="false"
+            app:key="storage_permission"
+            app:title="@string/title_storage_permission" />
+
+        <SwitchPreference
+            app:iconSpaceReserved="false"
+            app:defaultValue="false"
+            app:key="install_permission"
+            app:title="@string/title_install_permission" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/title_setting_mod_manager">
+
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            app:defaultValue="com.ea.game.pvz2_row\ncom.ea.game.pvz2_na"
+            app:key="mod_target_package_name_list"
+            app:title="可选目标游戏包名"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            app:defaultValue="768"
+            app:key="mod_rsb_pack_mem_sz"
+            app:title="默认RSB打包所需内存大小"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            app:defaultValue="32"
+            app:key="mod_rton_enc_mem_sz"
+            app:title="默认RTON编码所需内存大小"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

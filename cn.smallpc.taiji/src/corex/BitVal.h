@@ -1,0 +1,25 @@
+﻿#pragma once
+
+# define BIN_16_14_04_04_04 0xF000
+# define BIN_16_04_14_04_04 0x0F00
+# define BIN_16_04_04_14_04 0x00F0
+# define BIN_16_04_04_04_14 0x000F
+
+# define BIN_16_15_06_05 0xF800
+# define BIN_16_05_16_05 0x07E0
+# define BIN_16_05_06_15 0x001F
+
+# define BIN_16_11_05_05_05 0x8000
+# define BIN_16_01_15_05_05 0x7C00
+# define BIN_16_01_05_15_05 0x03E0
+# define BIN_16_01_05_05_15 0x001F
+
+# define BIN_16_15_05_05_01 0xF800
+# define BIN_16_05_15_05_01 0x07C0
+# define BIN_16_05_05_15_01 0x003E
+# define BIN_16_05_05_05_11 0x0001
+
+# define BIN_32_18_08_08_08 0xFF000000
+# define BIN_32_08_18_08_08 0x00FF0000
+# define BIN_32_08_08_18_08 0x0000FF00
+# define BIN_32_08_08_08_18 0x000000FF

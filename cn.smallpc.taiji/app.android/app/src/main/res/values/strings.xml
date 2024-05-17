@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">太極</string>
+    <string name="my_name">🇨🇳SmallPC🇨🇳</string>
+    <string name="my_site">https://smallpc.cn</string>
+    <string name="my_email">smallpc@qq.com</string>
+    <string name="title_entry">主界面</string>
+    <string name="title_about">关于</string>
+    <string name="title_setting">设置</string>
+    <string name="title_run_cmd">执行指令</string>
+    <string name="title_mod_manager">MOD管理</string>
+
+    <string name="title_run_cmd_tab_shortcut">快捷指令</string>
+    <string name="title_run_cmd_tab_script">脚本</string>
+    <string name="title_run_cmd_tab_qe">QE模式</string>
+    <string name="title_run_cmd_tab_func">函数</string>
+
+    <string name="update">更新</string>
+
+    <string name="tip_lib_not_found">未安装库</string>
+    <string name="tip_path_not_found">未找到路径</string>
+    <string name="tip_file_not_found">未找到文件</string>
+    <string name="tip_dir_not_found">未找到文件夹</string>
+
+    <string name="title_setting_common">通用设置</string>
+    <string name="title_setting_mod_manager">MOD管理设置</string>
+
+    <string name="title_permission">权限</string>
+    <string name="title_storage_permission">存储权限</string>
+    <string name="title_install_permission">APK安装权限</string>
+    <string name="tip_permission_denied">未获取权限</string>
+    <string name="permission_request_success">权限申请成功</string>
+    <string name="permission_request_failed">权限申请失败</string>
+
+    <string name="title_abi_unsupport">ABI不受支持</string>
+    <string name="tip_abi_unsupport_desc">本版本程序只支持 arm64-v8a 设备，而你的设备不是</string>
+    <string name="tip_update_need_permission">更新功能需要文件读写权限与APK安装权限，请先进入设置界面获取</string>
+    <string name="tip_update_error_ver">当前APP版本内置升级器版本与云端所接受版本不匹配，请手动在网站上下载新版APK</string>
+    <string name="tip_update_app_finish">新版本APK已下载，请安装</string>
+    <string name="tip_update_lib_finish">新版本CORE库已安装完毕</string>
+    <string name="tip_update_file_finish">新版本依赖文件已安装完毕</string>
+
+    <string name="tip_run_cmd_or_not">是否执行命令？</string>
+    <string name="tip_select_func">选择函数</string>
+    <string name="tip_select_pkg">选择目标游戏包名</string>
+    <string name="tip_rsb_pack_mem_sz">RSB打包申请内存</string>
+    <string name="tip_rton_enc_mem_sz">RTON编码申请内存</string>
+    <string name="tip_load_func_finish">函数表加载完成</string>
+    <string name="tip_run_script_finish">脚本执行完毕</string>
+    <string name="tip_run_script_failed">脚本执行失败</string>
+
+    <string name="text_run">运行</string>
+    <string name="text_shortcut_desc">说明</string>
+
+    <string name="text_script_file">脚本文件</string>
+    <string name="text_select">选择</string>
+    <string name="text_run_script_file">执行脚本文件</string>
+    <string name="text_run_qe">执行QuickEnter</string>
+    <string name="text_run_qe_with_path">执行所选QuickEnter</string>
+    <string name="text_select_func">选择函数</string>
+    <string name="text_gen_func_then_run">生成函数指令并执行</string>
+
+    <string name="text_game_test">检测</string>
+    <string name="text_game_backup">备份</string>
+    <string name="text_game_backup_restore">恢复备份</string>
+    <string name="text_game_backup_clean">清除备份</string>
+    <string name="text_clean">清除</string>
+    <string name="text_button_category_game">游戏数据</string>
+    <string name="text_button_category_game_backup">数据备份</string>
+    <string name="text_button_category_mod">MOD应用</string>
+    <string name="tip_game_obb_not_found">未找到游戏数据包</string>
+    <string name="tip_game_pp_not_found">未找到游戏存档</string>
+    <string name="text_mod_apply">应用MOD</string>
+    <string name="text_mod_intro">解包RSB</string>
+    <string name="text_mod_outro">打包RSB</string>
+    <string name="text_mod_applying">应用MOD中…</string>
+    <string name="text_mod_applying_1">预处理</string>
+    <string name="text_mod_applying_2">应用MOD包</string>
+    <string name="text_mod_applying_3">生成新数据包</string>
+    <string name="error_func_list_null">函数列表为空</string>
+
+    <string name="error_game_backup_not_found">未找到游戏数据备份</string>
+    <string name="error_game_backup_not_found_when_mod">未找到游戏数据备份，无法进行MOD，请先进行数据备份</string>
+    <string name="error_game_unpack_data_not_found_when_outro">未找到数据包解包数据，无法进行打包</string>
+    <string name="warning_game_unpack_data_not_found_when_apply">未找到数据包解包数据，应用MOD可能失败，是否继续？</string>
+    <string name="warning_game_data_exist">游戏数据已存在，继续将会覆盖原有数据，是否继续？</string>
+    <string name="warning_game_backup_exist">游戏数据备份已存在，继续将会覆盖原有备份，是否继续？</string>
+    <string name="warning_game_backup_clean">是否要清除已有备份？</string>
+
+    <string name="string_yes_upper">是</string>
+    <string name="string_no_upper">否</string>
+    <string name="string_cancel_upper">撤销</string>
+    <string name="string_close_upper">关闭</string>
+    <string name="string_ok_upper">确定</string>
+    <string name="string_exit_upper">退出</string>
+    <string name="string_error_upper">错误</string>
+    <string name="string_no_error_upper">无错误</string>
+    <string name="string_warning_upper">警告</string>
+    <string name="string_finish_upper">完成</string>
+    <string name="string_tip_upper">提示</string>
+</resources>

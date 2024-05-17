@@ -1,0 +1,21 @@
+
+* {
+	user-select: none;
+}
+
+.mdui-drawer {
+	overflow-y: scroll;
+}
+
+#label-list>li>:nth-child(2) {
+	margin-left: 8px;
+}
+
+#stage-shell {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#stage {
+	position: absolute;
+}

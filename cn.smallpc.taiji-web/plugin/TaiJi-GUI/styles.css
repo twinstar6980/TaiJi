@@ -1,0 +1,19 @@
+* {
+  user-select: none;
+}
+
+.mdui-drawer {
+  overflow-y: scroll;
+}
+
+#console-page {
+  overflow: scroll;
+}
+#console-page>span {
+  overflow-x: hidden;
+  white-space: pre;
+  user-select: auto;
+}
+#parm-list span {
+  font-size: large;
+}

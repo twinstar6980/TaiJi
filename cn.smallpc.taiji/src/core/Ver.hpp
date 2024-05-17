@@ -1,0 +1,37 @@
+﻿#pragma once
+
+//#define NAME u8"太極"
+#define NAME "\xE5\xA4\xAA\xE6\xA5\xB5"
+
+#define VER_CODE_MAJOR 3
+#define VER_CODE_MINOR 12
+#define VER_CODE_PATCH 0
+
+#define VER_CODE { VER_CODE_MAJOR, VER_CODE_MINOR, VER_CODE_PATCH }
+
+#define TO_STRING2(arg) #arg
+#define TO_STRING(arg) TO_STRING2(arg)
+
+#define VER_CODE_STR (TO_STRING(VER_CODE_MAJOR) "." TO_STRING(VER_CODE_MINOR) "." TO_STRING(VER_CODE_PATCH))
+
+#define VER_PRIVATE
+
+#if defined VER_PRIVATE
+
+#define VER_TYPE "private"
+
+#define ENABLE_RTON_CRYPTOR
+#define ENABLE_PAM_ENCODER_PLAIN
+
+#else
+
+#define VER_TYPE "public"
+
+#define ENABLE_SHOW_COPYRIGHT_INFO
+
+#define ENABLE_XFL_INFO_VALIDATE
+
+#define ENABLE_VALIDATE_SYSTEM_TIME
+//#define ENABLE_VALIDATE_COUNTRY
+
+#endif

@@ -1,0 +1,106 @@
+
+		<div class='mdui-p-a-1'>
+			<div class='mdui-panel' mdui-panel>
+				<div class='mdui-panel-item'>
+					<div class='mdui-panel-item-header mdui-p-x-1'>
+						<div class='mdui-panel-item-title mdui-m-l-1'>Fill</div>
+						<i class='mdui-panel-item-arrow mdui-icon material-icons'>keyboard_arrow_down</i>
+					</div>
+					<div class='mdui-panel-item-body mdui-p-x-1'>
+						<div class='mdui-p-a-1 mdui-m-t-2 mdui-shadow-2'>
+							<div>
+								<button class='mdui-btn mdui-btn-icon mdui-ripple' onclick='showEasyDialog('Fill Array-Integer', '在数组中填充 闭区间 [ $begin, $end ] 中的整数，或填充 $count 个整数 $value')'>
+									<i class='mdui-icon material-icons'>info_outline</i>
+								</button>
+								<span class='mdui-typo-subheading mdui-m-l-1'>Array-Integer</span>
+							</div>
+							<div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>style</label>
+									<select id='_fill_array_integer_style' class='mdui-select' mdui-select>
+										<option value='Interval' selected>Interval</option>
+										<option value='Count'>Count</option>
+									</select>
+								</div>
+								<div class='mdui-textfield' style='display: inline-block; width: 48%; '>
+									<label class='mdui-textfield-label'>begin / value</label>
+									<input id='_fill_array_integer_parm_a' class='mdui-textfield-input' type='number' step='1'></input>
+								</div>
+								<div class='mdui-textfield' style='display: inline-block; width: 48%; float: right;'>
+									<label class='mdui-textfield-label'>end / count</label>
+									<input id='_fill_array_integer_parm_b' class='mdui-textfield-input' type='number' step='1'></input>
+								</div>
+							</div>
+							<button class='mdui-btn mdui-btn-dense mdui-ripple' style='width: 100%;' onclick='eventCreateFillDialog('Array-Integer', [document.getElementById('_fill_array_integer_style').value, parseInt(document.getElementById('_fill_array_integer_parm_a').value), parseInt(document.getElementById('_fill_array_integer_parm_b').value)])'>Fill</button>	
+						</div>
+						<div class='mdui-p-a-1 mdui-m-t-2 mdui-shadow-2'>
+							<div>
+								<button class='mdui-btn mdui-btn-icon mdui-ripple' onclick='showEasyDialog('Fill Array-Mapper', '在数组中填充 映射表 $name 中选定项的 索引值或映射值')'>
+									<i class='mdui-icon material-icons'>info_outline</i>
+								</button>
+								<span class='mdui-typo-subheading mdui-m-l-1'>Array-Mapper</span>
+							</div>
+							<div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>target</label>
+									<select id='_fill_array_mapper_target' class='mdui-select' mdui-select>
+										<option value='Index' selected>Index</option>
+										<option value='Value'>Value</option>
+									</select>
+								</div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>name</label>
+									<input id='_fill_array_mapper_name' class='mdui-textfield-input' type='text' list='_datalist_mappername'></input>
+									</select>
+								</div>
+							</div>
+							<button class='mdui-btn mdui-btn-dense mdui-ripple' style='width: 100%;' onclick='eventCreateFillDialog('Array-Mapper', [document.getElementById('_fill_array_mapper_target').value, document.getElementById('_fill_array_mapper_name').value])'>Fill</button>
+						</div>
+						<div class='mdui-p-a-1 mdui-m-t-2 mdui-shadow-2'>
+							<div>
+								<button class='mdui-btn mdui-btn-icon mdui-ripple' onclick='showEasyDialog('Fill Array-Object-Mapper', '在数组中填充 对象模板 $class ，其指定属性使用 映射表 $mapper 中的选定值')'>
+									<i class='mdui-icon material-icons'>info_outline</i>
+								</button>
+								<span class='mdui-typo-subheading mdui-m-l-1'>Array-Object-Mapper</span>
+							</div>
+							<div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>class</label>
+									<input id='_fill_array_object_with_mapper_class' class='mdui-textfield-input' type='text' list='_datalist_classname'></input>
+								</div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>mapper-target</label>
+									<select id='_fill_array_object_with_mapper_mapper_target' class='mdui-select' mdui-select>
+										<option value='Index' selected>Index</option>
+										<option value='Value'>Value</option>
+									</select>
+								</div>
+								<div class='mdui-textfield' style='overflow: visible;'>
+									<label class='mdui-textfield-label'>mapper-name</label>
+									<input id='_fill_array_object_with_mapper_mapper_name' class='mdui-textfield-input' type='text' list='_datalist_mappername'></input>
+									</select>
+								</div>
+							</div>
+							<button class='mdui-btn mdui-btn-dense mdui-ripple' style='width: 100%;' onclick='eventCreateFillDialog('Array-Object-Mapper', [document.getElementById('_fill_array_object_with_mapper_class').value, document.getElementById('_fill_array_object_with_mapper_mapper_target').value, document.getElementById('_fill_array_object_with_mapper_mapper_name').value])'>Fill</button>
+						</div>
+						<div class='mdui-p-a-1 mdui-m-t-2 mdui-shadow-2'>
+							<div>
+								<button class='mdui-btn mdui-btn-icon mdui-ripple' onclick='showEasyDialog('Fill WorldCompletionData', '填充 WorldCompletionData 通过 worldmap.json')'>
+									<i class='mdui-icon material-icons'>info_outline</i>
+								</button>
+								<span class='mdui-typo-subheading mdui-m-l-1'>WorldCompletionData</span>
+							</div>
+							<div>
+								<input id='_fill_WorldCompletionData_input_file' type='file' style='display: none;' onchange='loadWorldMapForFillTool(this.files[0])'></input>
+								<div class='mdui-textfield'>
+									<label class='mdui-textfield-label'>worldmap</label>
+									<p id='_fill_WorldCompletionData_worldmap_name'>null</p>
+								</div>
+								<button class='mdui-btn mdui-btn-dense mdui-ripple' style='width: 100%;' onclick='document.getElementById('_fill_WorldCompletionData_input_file').click();'>Upload</button>
+							</div>
+							<button class='mdui-btn mdui-btn-dense mdui-ripple' style='width: 100%;' onclick='eventCreateFillDialog('WorldCompletionData', [])'>Fill</button>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

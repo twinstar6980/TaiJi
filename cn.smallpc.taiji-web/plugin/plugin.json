@@ -1,0 +1,6 @@
+{
+    "AnimationViewer": [ "2.0.0", "PvZ-2 Animation Viewer" ],
+    "MapDesigner": [ "2.0.0", "Visual PvZ-2 World-Map Editor" ],
+    "JSONEditor": [ "1.0.0", "PvZ-2 JSON-Editor" ],
+    "JSTool": [ "1.0.0", "PvZ-2 JS Tool" ]
+}

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    ndkVersion '21.3.6528147'
+
+    signingConfigs {
+        common {
+            storePassword 'spcZG0405'
+            keyAlias = 'key.smallpc'
+            keyPassword 'spcZG0405'
+            storeFile file('D:\\MyProgram\\smallpc.jks')
+        }
+    }
+
+    defaultConfig {
+        applicationId "cn.smallpc.taiji.app.android"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 130
+        versionName '1.10.0'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.common
+
+        ndk {
+            abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}

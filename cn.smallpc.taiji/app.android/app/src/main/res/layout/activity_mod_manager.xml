@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mm_gl_v_1d2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mm_gl_v_1d3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mm_gl_v_2d3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mm_gl_v_1d4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mm_gl_v_3d4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tip_select_pkg"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_pkg_select"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm_pkg_select" />
+
+    <Spinner
+        android:id="@+id/mm_pkg_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tip_rsb_pack_mem_sz"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_rsb_pack_mem_sz"
+        app:layout_constraintEnd_toStartOf="@+id/mm_rsb_pack_mem_sz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm_rsb_pack_mem_sz" />
+
+    <EditText
+        android:id="@+id/mm_rsb_pack_mem_sz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintTop_toBottomOf="@+id/mm_pkg_select" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tip_rton_enc_mem_sz"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_rton_enc_mem_sz"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintTop_toTopOf="@+id/mm_rton_enc_mem_sz"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <EditText
+        android:id="@+id/mm_rton_enc_mem_sz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintTop_toBottomOf="@+id/mm_pkg_select" />
+
+    <View
+        android:id="@+id/mm_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mm_rsb_pack_mem_sz" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/text_button_category_game"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_data_check"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm_data_check" />
+
+    <Button
+        android:id="@+id/mm_data_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_game_test"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_2d3"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintTop_toBottomOf="@+id/mm_split_line" />
+
+    <Button
+        android:id="@+id/mm_data_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_clean"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_2d3"
+        app:layout_constraintTop_toTopOf="@+id/mm_data_check" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/text_button_category_game_backup"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_data_backup"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm_data_backup" />
+
+    <Button
+        android:id="@+id/mm_data_backup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_game_backup"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintTop_toBottomOf="@+id/mm_data_clean" />
+
+    <Button
+        android:id="@+id/mm_data_backup_restore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_game_backup_restore"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintTop_toTopOf="@+id/mm_data_backup" />
+
+    <Button
+        android:id="@+id/mm_data_backup_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_game_backup_clean"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintTop_toTopOf="@+id/mm_data_backup_restore" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/text_button_category_mod"
+        app:layout_constraintBottom_toBottomOf="@+id/mm_mod_apply"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm_mod_apply" />
+
+    <Button
+        android:id="@+id/mm_mod_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mod_apply"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d4"
+        app:layout_constraintTop_toBottomOf="@+id/mm_data_backup_restore" />
+
+    <Button
+        android:id="@+id/mm_rsb_unpack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mod_intro"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_1d2"
+        app:layout_constraintTop_toTopOf="@+id/mm_mod_apply" />
+
+    <Button
+        android:id="@+id/mm_rsb_pack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mod_outro"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mm_gl_v_3d4"
+        app:layout_constraintTop_toTopOf="@+id/mm_rsb_unpack" />
+
+    <View
+        android:id="@+id/mm_split_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mm_mod_apply" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mm_split_line_1">
+
+        <ListView
+            android:id="@+id/mm_mod_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

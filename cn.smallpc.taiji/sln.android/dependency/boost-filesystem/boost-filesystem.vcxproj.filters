@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\operations.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\path.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\path_traits.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\portability.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\unique_path.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\utf8_codecvt_facet.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\windows_file_codecvt.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\codecvt_error_category.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\directory.cpp" />
+    <ClCompile Include="..\..\..\src\dependency\boost-filesystem\exception.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\dependency\boost-filesystem\platform_config.hpp" />
+    <ClInclude Include="..\..\..\src\dependency\boost-filesystem\windows_file_codecvt.hpp" />
+    <ClInclude Include="..\..\..\src\dependency\boost-filesystem\windows_tools.hpp" />
+    <ClInclude Include="..\..\..\src\dependency\boost-filesystem\error_handling.hpp" />
+  </ItemGroup>
+</Project>

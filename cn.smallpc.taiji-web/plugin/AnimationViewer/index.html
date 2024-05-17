@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src='../common/mdui/js/mdui.min.js'></script>
+	<link href='../common/mdui/css/mdui.min.css' rel='stylesheet'>
+	<script>if (typeof module === 'object') [window.module, module] = [module, undefined];</script>
+	<script src='../common/js/jquery-3.5.1.min.js'></script>
+	<script>if (window.module) module = window.module;</script>
+	<script src='../common/js/FileSaver.js'></script>
+	<script src='../common/js/typeUtil.js'></script>
+	<script src='../common/js/toolUtil.js'></script>
+	<script src='../common/js/pvz2anim.js'></script>
+	<link href='../common/js/pvz2anim.css' rel='stylesheet'>
+	<script src='./scripts.js'></script>
+	<link href='./styles.css' rel='stylesheet'>
+	<title>Animation-Viewer</title>
+	<style id='stage-style'></style>
+</head>
+
+<body class='mdui-theme-layout-dark mdui-theme-primary-teal mdui-theme-accent-blue mdui-appbar-with-toolbar mdui-drawer-body-left mdui-drawer-body-right'>
+	<div id='dialog-docs-theme'></div>
+	<div class='mdui-appbar mdui-appbar-fixed'>
+		<div class='mdui-toolbar mdui-color-theme'>
+			<button class='mdui-btn mdui-btn-icon' mdui-tooltip='{ content: "toggle drawer" }' mdui-drawer='{ target: "#left-drawer" }'>
+				<i class='mdui-icon material-icons'>menu</i>
+			</button>
+			<button id='refresh' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "refresh" }'>
+				<i class='mdui-icon material-icons'>refresh</i>
+			</button>
+			<button class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "change color" }' mdui-dialog='{ target: "#dialog-docs-theme" }'>
+				<i class='mdui-icon material-icons'>color_lens</i>
+			</button>
+			<p class='mdui-typo-title'>Animation-Viewer</p>
+			<button id='about' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "about" }'>
+				<i class='mdui-icon material-icons'>info_outline</i>
+			</button>
+			<button id='clean-view' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "clean view" }'>
+				<i class='mdui-icon material-icons'>clear_all</i>
+			</button>
+			<div class='mdui-toolbar-spacer'></div>
+			<div class='mdui-textfield' style='width: 700px;' mdui-tooltip='{ content: "image folder path" }'>
+				<input id='res-path' class='mdui-textfield-input' type='text' placeholder='image folder path'>
+			</div>
+			<button id='upload-cssinfo' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "upload animation css-json" }'>
+				<i class='mdui-icon material-icons'>file_upload</i>
+			</button>
+			<button id='download-html' class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "download animation html" }' disabled>
+				<i class='mdui-icon material-icons'>file_download</i>
+			</button>
+			<button class='mdui-btn mdui-btn-icon mdui-ripple' mdui-tooltip='{ content: "toggle drawer" }' mdui-drawer='{ target: "#right-drawer" }'>
+				<i class='mdui-icon material-icons'>menu</i>
+			</button>
+		</div>
+	</div>
+	<div id='left-drawer' class='mdui-drawer mdui-shadow-16'>
+		<ul id='sub-list' class='mdui-m-y-1 mdui-list mdui-list-dense'></ul>
+	</div>
+	<div id='right-drawer' class='mdui-drawer mdui-drawer-right mdui-shadow-16'>
+		<ul id='label-list' class='mdui-m-y-1 mdui-list mdui-list-dense'></ul>
+	</div>
+	<div class='mdui-m-t-2 mdui-p-x-2'>
+		<div id='stage-shell' class='mdui-shadow-12'>
+			<div id='stage' _pvz2-anim='main'></div>
+		</div>
+		<div id='stage-ctrl-shell' class='mdui-m-t-2 mdui-m-x-0 mdui-p-a-2 mdui-shadow-12 mdui-row mdui-valign'>
+			<div class='mdui-col-xs-9'>
+				<div class='mdui-row mdui-valign'>
+					<div class='mdui-col-xs-2' mdui-tooltip='{ content: "horizon position" }'>
+						<i class='mdui-icon material-icons'>swap_horiz</i>
+						<span id='stage-ctrl-show-pos-x' class='mdui-m-l-1'></span>
+					</div>
+					<div class='mdui-col-xs-10'>
+						<label class='mdui-slider mdui-slider-discrete mdui-m-r-1' mdui-tooltip='{ content: "horizon position" }'>
+							<input id='stage-ctrl-pos-x' type='range' step='1' min='-1000' max='1000'>
+						</label>
+					</div>
+				</div>
+				<div class='mdui-row mdui-valign'>
+					<div class='mdui-col-xs-2' mdui-tooltip='{ content: "vertical position" }'>
+						<i class='mdui-icon material-icons'>swap_vert</i>
+						<span id='stage-ctrl-show-pos-y' class='mdui-m-l-1'></span>
+					</div>
+					<div class='mdui-col-xs-10'>
+						<label class='mdui-slider mdui-slider-discrete mdui-m-r-1' mdui-tooltip='{ content: "vertical position" }'>
+							<input id='stage-ctrl-pos-y' type='range' step='1' min='-1000' max='1000'>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class='mdui-col-xs-2'>
+				<div class='mdui-row'>
+					<div class='mdui-col-xs-12'>
+						<label class='mdui-slider mdui-slider-discrete mdui-m-r-1' mdui-tooltip='{ content: "zoom out" }'>
+							<input id='stage-ctrl-scale-out' type='range' step='0.01' min='0.0' max='1.0'>
+						</label>
+					</div>
+				</div>
+				<div class='mdui-row'>
+					<div class='mdui-col-xs-12'>
+						<label class='mdui-slider mdui-slider-discrete mdui-m-r-1' mdui-tooltip='{ content: "zoom in" }'>
+							<input id='stage-ctrl-scale-in' type='range' step='0.01' min='1.0' max='10.0'>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class='mdui-col-xs-1' mdui-tooltip='{ content: "scale" }'>
+				<i class='mdui-icon material-icons'>zoom_out_map</i>
+				<span id='stage-ctrl-show-scale' class='mdui-m-l-1'></span>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
